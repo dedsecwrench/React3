@@ -14,10 +14,8 @@ const [toggle,setToggle] = useState(true);
 
 const getDetails = (e) =>{
     e.preventDefault();
-    const newInfo = {...empInfo,id:new Date().getTime().toString()}
-    console.log(newInfo)
-    setRecord([...record,newInfo])
-    record.push(newInfo)
+    setRecord([...record,empInfo])
+    record.push(empInfo)
     console.log(record)
     setInfo({name:"",dep:"",rating:""})
     setToggle(false)
