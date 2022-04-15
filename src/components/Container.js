@@ -11,9 +11,9 @@ const Container = ({Record}) => {
                   {Record.map((current,index) => {
                       return (
                           <div className='box' key={index}>
-                              Name: {current.name}<br />
-                              Department: {current.dep}<br />
-                              Rating: {current.rating}<br />
+                              Name : {current.name}<br />
+                              Department : {current.dep}<br />
+                              Rating : {current.rating}<br />
                           </div>
                       )
                   })}
