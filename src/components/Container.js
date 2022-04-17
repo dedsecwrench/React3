@@ -7,13 +7,13 @@ const Container = ({Record}) => {
     <div>
         <div>
             {
-             <>  <div className='container' id='addBox'>
+              <>  <div className='container'>
                   {Record.map((current,index) => {
                       return (
                           <div className='box' key={index}>
-                              Name : {current.name}<br />
-                              Department : {current.dep}<br />
-                              Rating : {current.rating}<br />
+                             <b> Name :</b> <span>{current.name}</span><br />
+                             <b> Department :</b> <span>{current.dep}</span><br />
+                             <b> Rating : </b><span>{current.rating}</span><br />
                           </div>
                       )
                   })}
