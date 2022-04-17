@@ -11,7 +11,8 @@ const [empInfo,setInfo] = useState({
 });
 const [record,setRecord] = useState([]);
 const [toggle,setToggle] = useState(true);
-
+const [msg,setMsg] = useState("");
+  
 const getDetails = (e) =>{
     e.preventDefault();
     setRecord([...record,empInfo])
@@ -19,12 +20,17 @@ const getDetails = (e) =>{
     console.log(record)
     setInfo({name:"",dep:"",rating:""})
     setToggle(false)
+    showMsg();
 }
 
 const goBack = () =>{
  setToggle(true);
 }
-
+const showMsg = () =>{
+  if (record.length > 4){
+    setMsg("Scroll down to see more!")
+  }
+}
   return (
     <div>
       
@@ -45,6 +51,7 @@ const goBack = () =>{
         { !toggle &&
         <div>
            <h1>Employee Feedback Data</h1><br />
+            {<h4>{msg}</h4>}
            <Container Record={record}/>
            <br/>
            <button className='btn btn-danger' onClick={goBack}>Go Back</button>
