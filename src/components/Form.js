@@ -42,9 +42,9 @@ const goBack = () =>{
         }
         </div>
         
-        <br/>   <br/>   <br/>
         { !toggle &&
         <div>
+           <h1>Employee Feedback Data</h1><br />
            <Container Record={record}/>
            <br/>
            <button className='btn btn-danger' onClick={goBack}>Go Back</button>
